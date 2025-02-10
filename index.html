@@ -58,16 +58,16 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	var totalPercent = allergyPercent + coldPercent;
 	
-	if (totalPercent !== 100) {
+	if (totalPercent > 0) {
 
 		var scale = 100 / totalPercent ;
 		allergyPercent *= scale;
 		coldPercent *=scale;
 	}	
-	var resultText = document.getElementById("results");
+	var resultText = document.getElementById("resultText");
 		
 resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> Probability it is a cold =" + coldPercent; 
-
+	}
 function restartTest() {
 	allergy_count= 0
 	cold_count=0
@@ -194,9 +194,9 @@ function restartTest() {
 		<p>Click the button below to discover your fate!</p>
 	</div>
 <div id="resultContainer" class="w3 container">
-	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b</button>
+	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
 	<p id="resultText"></p>
-	<button onclick="restartTest(); class=w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b</button>
+	<button onclick="restartTest();" class=w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b</button>
 
 	</div>
 </div>
