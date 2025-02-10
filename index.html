@@ -36,6 +36,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 
 <script>
+	var totalQuestions =6
         var allergy_count = 0;
         var cold_count = 0;
 
@@ -51,12 +52,17 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 
 	function getResult() {
 
-	var allergyPercent = (allergy_count/4)*100
+	var allergyPercent = (allergy_count/totalQuestions)*100
 		
-	var coldPercent = (cold_count/5)*100
+	var coldPercent = (cold_count/totalQuestions)*100
 
 	var totalPercent = allergyPercent + coldPercent;
+	
+	if (totalPercent !== 100) {
 
+		var scale = 100 / totalPercent ;
+		allergyPercent *= scale;
+		coldPercent *=scale;
 	}	
 	var resultText = document.getElementById("results");
 		
@@ -65,7 +71,6 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent + "<br> 
 function restartTest() {
 	allergy_count= 0
 	cold_count=0
-
 	location.href = "#content0";
 
 }
