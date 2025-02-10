@@ -118,8 +118,8 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		<a href="#three"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#three"  onclick="coldAdd();" class="w3-btn w3-black">No</a>
 	</div>	
-</div>
 
+</div>
 
 <div class="page" id="three">
 	<div id="header" class="w3-container w3-flat-carrot">
@@ -127,7 +127,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 	
     	<div id="content" class="w3-container">
-        	<p>Do you have a sore throat?.</p> 
+        <p>Do you have a sore throat?.</p> 
 	</div>	
 	
 		<a href="#four"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
@@ -161,12 +161,21 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 	</div>
 		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
          	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+	</div>
 </div>
-
+	
 <div class="page" id="results">
 	<div id="header" class="w3-container w3-flat-carrot">
 		<h1>Results</h1>
-		<p>DIY!</p>
+</div>
+	<div id= "content" class="w3 container">
+		<p>Click the button below to discover your fate!</p>
+	</div>
+<div id="resultContainer" class="w3 container">
+	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b</button>
+	<p id="resultText"></p>
+	<button onclick="restartTest(); class=w3-button w3-white w3-round w3-hover-red"><b>Restart Test</b</button>
+
 	</div>
 </div>
 	
