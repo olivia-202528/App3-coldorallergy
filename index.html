@@ -68,7 +68,7 @@ https://stackoverflow.com/questions/8211128/multiple-distinct-pages-in-one-html-
 		
 resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(2) + "<br> Probability it is a cold =" + coldPercent.toFixed(2); 
 
-location.href= "results";
+location.href= "#results";
 	}
 function restartTest() {
 	allergy_count= 0
@@ -183,8 +183,8 @@ function restartTest() {
     	<div id="content5" class="w3-container">
         	<p>Is your mucus discolored?.</p>
 	</div>
-		<a href="#six"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
-         	<a href="#six"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
+		<a href="#results"  onclick="allergyAdd();" class="w3-btn w3-black"> Yes</a>
+         	<a href="#results"  onclick="coldAdd();" class="w3-btn w3-black">No</a>	
 </div>
 	
 <div class="page" id="results">
@@ -193,7 +193,7 @@ function restartTest() {
 </div>
 	<div id= "content" class="w3 container">
 		<p>Click the button below to discover your fate!</p>
-		<a href="#results" class="w3-btn w3-black" onclick= "getResult();"See Results</a>	
+		<a href="#results" class="w3-btn w3-black" onclick= "getResult();">See Results</button>	
 	</div>
 <div id="resultContainer" class="w3 container">
 	<button onclick="getResult();" class="w3-button w3-white w3-round w3-hover-green"><b>Results</b></button>
