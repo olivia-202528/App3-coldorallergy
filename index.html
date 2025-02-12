@@ -71,13 +71,13 @@ resultText.innerHTML = "Probability it is allergies =" + allergyPercent.toFixed(
 location.href= "#results";
 	}
 function restartTest() {
-	allergy_count= 0
-	cold_count=0
+	allergy_count= 0;
+	cold_count=0;
 
 	document.getElementById("resultText").innerHTML = "";
-	window.location.hash ="";
+	window.location.hash ="#reset";
 	setTimeout(()=> {
-		window.location.hash = "#content0"
+		window.location.hash = "#content0";
 		   }, 50);
 }
 
