@@ -73,10 +73,12 @@ location.href= "#results";
 function restartTest() {
 	allergy_count= 0
 	cold_count=0
-	window.location.hash = "#content0";
 
 	document.getElementByID("resultText").innerHTML = "";
-
+	window.location.hash ="";
+	setTimeout(()=> {
+		window.location.hash = "content0"
+		   }, 50);
 }
 
 </script>
